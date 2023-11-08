@@ -3,13 +3,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: #111;
     font-family: 'Poppins';
 }
 .app {
     display: flex;
     flex-direction: column;
     justify-content: center;
+     background: #111;
 }
 
 /* header */
@@ -21,7 +21,7 @@
 } 
 .header {
     text-align: center;
-    padding: 50px;
+    padding: 50px 0 15px;
     font-size: 3.5em;
     color: #ffd700;
 }
@@ -34,14 +34,14 @@
 
 /* input */
 input {
-    display: inline-block;
+   display: inline-block;
    width: 30%;
    height: 1.5em;
    outline: none;
    font-size: 1em;
    padding: 18px 10px;
    position: relative;
-   /* opacity: 0.9; */
+   opacity: 0.7;
    background-color: inherit;
    color: #ffd700;
    border: none;
@@ -53,23 +53,81 @@ input::placeholder {
     opacity: 0.2;
 }
 
-/* search image */
+/* search input */
+.search {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .search-image {
     position: absolute;
-    top: 195px;
-    right: 36%;
-    width: 2%;
-    height: 3%;
+    right: 36.5%;
 }
 /* movies*/
 .moviecard--container {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 55px 40px;
+    padding: 60px 80px; */
+}
+.moviecard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 55px 40px;
-    padding: 30px 70px;
-}
-.moviecard {
+    padding: 60px 80px;
+
+
+
+    /* position: relative;
+    width: 100px;
     height: 350px;
-    border: 1px solid #ffd90010;
     border-radius: 20px; 
+    display: flex;
+    flex-direction: column; */
+    /* border: 2px solid #ffd700; */
+}
+.moviecard p {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: inherit;
+    color: #fff;
+    font-size: 0.9em;
+    z-index: 1;
+}
+div.image{
+    position: relative;
+    width: 100%;
+    height: 78%;
+    border-radius: 20px 20px 0 0;
+}
+div.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+@media only screen and (max-width: 975px) {
+    .moviecard {grid-template-columns: repeat(5, minmax(250px, 0.5fr));}
+}
+@media only screen and (max-width: 697px) {
+    .moviecard {grid-template-columns: repeat(5, minmax(250px, 0.5fr));}
+} 
+div.details{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: 22%;
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 0.7em;
+    background-color: #ffd70012;
+    border-radius: 0 0 20px 20px;
+}
+div.details .title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 5px;
+    text-wrap:wrap ;
 }
