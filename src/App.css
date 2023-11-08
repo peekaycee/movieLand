@@ -1,0 +1,75 @@
+/* reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    font-family: 'Poppins';
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* header */
+.header--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+.header {
+    text-align: center;
+    padding: 50px;
+    font-size: 3.5em;
+    color: #ffd700;
+}
+.header  span.s1 {
+    opacity: 0.3;
+}
+.header  span.s2 {
+    opacity: 0.1;
+}
+
+/* input */
+input {
+    display: inline-block;
+   width: 30%;
+   height: 1.5em;
+   outline: none;
+   font-size: 1em;
+   padding: 18px 10px;
+   position: relative;
+   /* opacity: 0.9; */
+   background-color: inherit;
+   color: #ffd700;
+   border: none;
+   border: 1px solid #bebebe29 ;
+   border-radius: 10px;
+}
+input::placeholder {
+    color: #ffd700;
+    opacity: 0.2;
+}
+
+/* search image */
+.search-image {
+    position: absolute;
+    top: 195px;
+    right: 36%;
+    width: 2%;
+    height: 3%;
+}
+/* movies*/
+.moviecard--container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 55px 40px;
+    padding: 30px 70px;
+}
+.moviecard {
+    height: 350px;
+    border: 1px solid #ffd90010;
+    border-radius: 20px; 
+}
